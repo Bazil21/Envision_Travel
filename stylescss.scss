@@ -1,0 +1,136 @@
+/* =Variables
+----------------------------------------------------------------------------- */
+$dark-blue:                #204056;
+$light-blue:               #59A1C9;
+$aqua:                     #39D1B4;
+$salmon:                   #F65A5B;
+
+// Grayscale
+$white:                    #fff;
+$black:                    #000;
+$black-10:                 darken(#fff, 10%);
+$black-20:                 darken(#fff, 20%);
+$black-30:                 darken(#fff, 30%);
+$black-40:                 darken(#fff, 40%);
+$black-50:                 darken(#fff, 50%);
+$black-60:                 darken(#fff, 60%);
+$black-70:                 darken(#fff, 70%);
+$black-80:                 darken(#fff, 80%);
+$black-90:                 darken(#fff, 90%);
+
+
+
+body{
+  background: $black-10;
+  margin: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: $black-70;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #204056;
+  line-height: 57px;
+}
+
+
+section{
+  width: 100%;
+  position: relative;
+  
+  &:nth-child(even){
+    background: lighten($black-20, 5%);
+  }
+}
+.container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+hr{
+  
+  border: 0;
+  height: 1px;
+  width: 10%;
+  position: relative;
+  margin: 30px auto;
+  
+  
+  &.center-ball{
+    background: $aqua;
+    
+    &:before{
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $aqua;
+      display: inline-block;
+      border: 2px solid $aqua;
+      @include border-radius(50%);
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+    }
+  }
+  
+  &.center-diamond{
+    background: $aqua;
+    
+    &:before{
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $aqua;
+      display: inline-block;
+      border: 2px solid $aqua;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+      transform:rotate(45deg);
+      -ms-transform:rotate(45deg); /* IE 9 */
+      -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+    }
+  }
+  
+  &.center-square{
+    background: $aqua;
+    
+    &:before{
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $aqua;
+      display: inline-block;
+      border: 2px solid $aqua;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+    }
+  }
+  
+  &.center-star{
+    background: $aqua;
+    
+    &:before{
+      content: "★";
+      color: $aqua;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+      font-size: 15px;
+      line-height: 0;
+      text-shadow: 0 0 3px lighten($black-20, 5%);
+    }
+  }
+}
